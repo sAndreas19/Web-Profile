@@ -193,7 +193,7 @@ button:hover {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 884px) {
     main {
         padding: 10px 0;
         margin-top: 90px;
@@ -207,6 +207,7 @@ button:hover {
     .school img {
         margin: 0 auto;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -228,5 +229,9 @@ button:hover {
     /* Tampilkan menu navigasi saat tombol hamburger diklik */
     #menuToggle:checked + .navbar {
         display: flex;
+    }
+    main {
+        padding: 10px 0;
+        margin-top: 70px;
     }
 }
