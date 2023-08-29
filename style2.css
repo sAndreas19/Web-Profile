@@ -235,3 +235,10 @@ button:hover {
         margin-top: 70px;
     }
 }
+
+@media (max-width: 390px) {
+    main {
+        padding: 10px 0;
+        margin-top: 90px;
+    }
+}
