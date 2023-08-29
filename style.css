@@ -23,6 +23,16 @@ header h1{
     margin-left: 0;
 }
 
+#menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
 .navbar {
     display: flex;
     gap: 15px;
@@ -161,4 +171,26 @@ button {
 
 button:hover {
     background-color: #555;
+}
+
+@media (max-width: 768px) {
+    /* Tampilkan tombol hamburger pada perangkat mobile */
+    #menuToggle {
+        display: block;
+    }
+
+    /* Sembunyikan menu navigasi utama pada perangkat mobile */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #001F3F;
+        position: absolute;
+        top: 60px; /* Sesuaikan dengan tinggi header */
+        width: 100%;
+    }
+
+    /* Tampilkan menu navigasi saat tombol hamburger diklik */
+    #menuToggle:checked + .navbar {
+        display: flex;
+    }
 }

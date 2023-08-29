@@ -21,6 +21,16 @@ header {
     z-index: 1000;
 }
 
+#menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
 header h1{
     margin-left: 0;
 }
@@ -43,6 +53,10 @@ header h1{
 .onclick.active{
     font-weight: bold;
     border-bottom: 2px solid #0074E4;
+}
+
+.pembatas {
+    display: block;
 }
 
 nav h2 {
@@ -179,9 +193,10 @@ button:hover {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     main {
         padding: 10px 0;
+        margin-top: 90px;
     }
 }
 
@@ -191,5 +206,27 @@ button:hover {
     }
     .school img {
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Tampilkan tombol hamburger pada perangkat mobile */
+    #menuToggle {
+        display: block;
+    }
+
+    /* Sembunyikan menu navigasi utama pada perangkat mobile */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #001F3F;
+        position: absolute;
+        top: 60px; /* Sesuaikan dengan tinggi header */
+        width: 100%;
+    }
+
+    /* Tampilkan menu navigasi saat tombol hamburger diklik */
+    #menuToggle:checked + .navbar {
+        display: flex;
     }
 }
